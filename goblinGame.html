@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function start(){
+            pile1 = 3;
+            pile2 = 3;
+            pile3 = 3
+            playerTurn = false;
+        }
+        function takeStone(count, pileNum){
+            if(pileNum == 1){
+                if(count > pile1){
+                    return false;
+                }
+                else{
+                    pile1 -= count;
+                    return true;
+                }
+            }
+            else if(pileNum == 2){
+                if(count > pile2){
+                    return false;
+                }
+                else{
+                    pile2 -= count;
+                    return true;
+                }
+            }
+            else{
+                if(count > pile3){
+                    return false;
+                }
+                else{
+                    pile3 -= count;
+                    return true;
+                }
+            }
+        }
+        function goblinTurn(){
+            if(pile1>=pile2 && pile1>=pile3){
+                takeStone(1,1);
+            }
+            else if(pile2>= pile3){
+                takeStone(1,2);
+            }
+            else{
+                takeStone(1,3);
+            }
+        }
+        function display(){
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
