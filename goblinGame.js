@@ -1,3 +1,4 @@
+/*Darius Saadat Period 7-8 Even Level 1 Goblin Game project*/
 var pile1 = 3;
 var pile2 = 3;
 var pile3 = 3;
