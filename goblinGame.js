@@ -81,14 +81,14 @@ function display(){
         else{
             lines += "X";
         }
-        lines += " ";
+        lines += " | ";
         if(pile2 >= i){
             lines += "O";
         }
         else{
             lines += "X";
         }
-        lines += " ";
+        lines += " | ";
         if(pile3 >= i){
             lines += "O";
         }
