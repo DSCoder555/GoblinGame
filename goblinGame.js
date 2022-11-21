@@ -51,25 +51,25 @@ function goblinTurn(){
     else if(!isPlayerTurn){
         if(pile1>=pile2 && pile1>=pile3){
             takeStone(1,1);
-            document.getElementById("action").innerHTML = "The goblins removed 1 stone from stack 1";
+            document.getElementById("action").innerHTML = "unK - We just removed 1 stone from stack 1. A brilliant strategy!";
         }
         else if(pile2>= pile3){
             takeStone(2,1);
-            document.getElementById("action").innerHTML = "The goblins removed 1 stone from stack 2";
+            document.getElementById("action").innerHTML = "unK - We just removed 1 stone from stack 2.  A sneaky move.";
         }
         else{
             takeStone(3,1);
-            document.getElementById("action").innerHTML = "The goblins removed 1 stone from stack 3";
+            document.getElementById("action").innerHTML = "unK - We just removed 1 stone from stack 3.  Our victory is guaranteed.";
         }
         isPlayerTurn = true;
         display();
         check();
         if(gameOver){
-            document.getElementById("action").innerHTML = "The game is over.  You won, the goblins lost.";
+            document.getElementById("action").innerHTML = "unK - The game is over.  You won, we lost.  How is that possible?";
         }
     }
     else{
-        document.getElementById("warning").innerHTML = "It is your turn";
+        document.getElementById("warning").innerHTML = "It is your turn.";
     }
 }
 function display(){
@@ -110,14 +110,14 @@ function playerTurn(pileNum,count){
             isPlayerTurn = false;
             check();
             if(gameOver){
-                document.getElementById("action").innerHTML = "The game is over.  You lost, the goblins won.";
+                document.getElementById("action").innerHTML = "unK - The game is over.  You lost, we won. Obviously, you never stood a chance.";
             }
             else{
-                document.getElementById("action").innerHTML = "You removed " + count + " stone from stack " + pileNum;
+                document.getElementById("action").innerHTML = "You removed " + count + " stone from stack " + pileNum + ".  Why did do you do that?";
             }
         }
         else{
-            document.getElementById("warning").innerHTML = "That move is not possible";
+            document.getElementById("warning").innerHTML = "That move is not possible.";
         }
     }
     else{
